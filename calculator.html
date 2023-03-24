@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN OF A CALCULATOR</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="display" id="display"></div>
+       <!--  <input type="text" class="display" id="display"> -->
+    <div class="keys"> 
+        <button class="plus operation  button" >+</button>
+        <button class="minus operation button">-</button>
+        <button class="times operation button">*</button>
+        <button class="divide operation button">/</button>
+        <button class="seven numbers button">7</button>
+        <button class="eight numbers button" >8</button>
+        <button class="nine numbers button" >9</button>
+        <button class="four numbers button" >4</button>
+        <button class="five numbers button" >5</button>
+        <button class="six numbers button" >6</button>
+        <button class="one numbers button">1</button>
+        <button class="two numbers button" >2</button>
+        <button class="three numbers button">3</button>
+        <button class="zero numbers button" >0</button>
+        <button class="decimal numbers button" >.</button>
+        <button class="cancle numbers button" >c</button>
+        <button class="equal button">=</button>
+    </div>
+</div>
+<script>
+let display = document.getElementById("display");
+let keys = Array.from(document.getElementsByClassName("button"));
+
+keys.map(button =>{
+    button.addEventListener('click', (e)=>{
+
+        switch(e.target.innerText){
+           
+            case 'c':
+                display.innerText = "";
+                break;
+            case '=':
+                try{
+                    display.innerText = eval(display.innerText);
+                }
+                catch{
+                    display.innerText='Error!!!';
+                }
+                break;
+            default:
+                display.innerText += e.target.innerText;
+        }
+    });
+});
+</script>
+</body>
+</html>

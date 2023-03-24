@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+margin: 5% auto;
+margin-top: 5rem;
+width: 17rem;
+padding:1rem;
+border: 1px solid rgb(168, 167, 167);
+line-height: 1.7rem;
+box-shadow: 0 0 65px rgba(55, 4, 108, 0.2);
+border-radius: 8%;
+}
+
+.display{
+margin: 1rem 0.5rem;
+width:14rem;
+height: 2.5rem;
+border: 1px solid rgb(168, 167, 167);
+padding: 10px;
+text-align: right;
+border-radius: 60px;
+font-size: 1.5rem;
+}
+
+/* input{
+    border: 0;
+    outline: 0;
+   
+
+} */
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 20.8% );
+    grid-template-rows:repeat(5, 2rem) ;
+    grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal cancle equal";
+    column-gap: 0.8rem;
+    row-gap: 0.7rem;
+}
+
+.equal{
+    grid-area:equal;
+    background-color: rgb(58, 58, 230);
+    border: none;
+    color: white;
+    border-radius: 5%;
+   
+}
+
+.operation{
+    background-color: rgb(212, 207, 207);
+    border: rgb(211, 205, 205);
+    font-size: 1.5rem;
+    border-radius: 15%;
+    animation: toscale .4s ease;
+    -webkit-animation: toscale .4s ease;
+    animation-fill-mode: forwards; 
+    
+}
+.operation:hover, 
+.operation:focus{
+    background-color: rgb(146, 141, 141);
+    color: white;
+    box-shadow: 10px 10px 20px rgba(39, 30, 225, 0.2);
+    animation: calculate .4s ease;
+    -webkit-animation: calculate .4s ease;
+    animation-fill-mode: forwards;   
+}
+@keyframes calculate{
+    0%{
+       -webkit-transform: scale(1.1);
+       transform: scale(1.1)
+        
+    }
+    100%{
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0)
+    }
+}
+
+@keyframes toscale{
+    0%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100%{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+.numbers{
+    font-size: 1.2rem;
+    border: 0.5px solid rgb(211, 205, 205);
+    border-radius: 15%;
+    -webkit-animation: toscale .4s ease;
+    animation: toscale .4s ease;
+    animation-fill-mode: forwards;
+}
+.numbers:hover, 
+.numbers:focus{
+    background-color: rgb(87, 84, 84);
+    color: white;
+    box-shadow: 10px 10px 20px rgba(39, 30, 225, 0.2);
+    -webkit-animation: calculate .4s ease;
+    animation: calculate .4s ease;
+    animation-fill-mode: forwards;
+}
+
+.equal:hover, 
+.equal:focus{
+    background-color:navy;
+    color: white;
+    -webkit-animation: calculate .4s ease;
+    animation: calculate .4s ease;
+    animation-fill-mode: forwards;
+
+    
+}
+
+@media all and (max-width:786px) {
+    .container{
+      /*  width: min(80%, 350px); */
+       margin: 5% auto;
+       margin-top: 5rem;
+       width: 15rem;
+     
+    }
+    .display{
+        width: 11.5rem;
+    }
+    .keys{
+    display: grid;
+    grid-template-columns: repeat(4, 20.8% );
+    grid-template-rows:repeat(5, 2rem) 
+    }
+}
+/* .seven{
+    grid-area:seven;
+}
+.eight{
+    grid-area:eight;
+} 
+/* .nine{
+    grid-area:nine;
+}
+/* .four{
+    grid-area:four;
+}
+.five{
+    grid-area:five;
+} */
+/* .six{
+    grid-area:six;
+}
+.one{
+    grid-area:one;
+} 
+.two{
+    grid-area:two;
+} 
+.three{
+    grid-area:three;
+} 
+.zero{
+    grid-area:zero;
+}
+.decimal{
+    grid-area:decimal;
+}  */
+
+
