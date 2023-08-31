@@ -9,17 +9,18 @@ margin: 5% auto;
 margin-top: 5rem;
 width: 17rem;
 padding:1rem;
-border: 1px solid rgb(168, 167, 167);
+border: 1px solid rgb(85, 83, 83);
 line-height: 1.7rem;
 box-shadow: 0 0 65px rgba(55, 4, 108, 0.2);
 border-radius: 8%;
+background-image: radial-gradient(circle, skyblue, white);
 }
 
 .display{
 margin-bottom: 1rem;
 max-width:15rem;
 height: 2.5rem;
-border: 1px solid rgb(168, 167, 167);
+border: 1px solid rgb(95, 93, 93);
 padding: 10px;
 text-align: right;
 border-radius: 60px;
